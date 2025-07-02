@@ -6,7 +6,7 @@
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    background: #f8f9fa;
+    background: #faf8f7;
     color: #333;
     min-height: 100vh;
 }
@@ -19,9 +19,9 @@ body {
 
 /* Header */
 .header {
-    background: #2d2d2d;
+    background: #302d2a;
     padding: 1rem 0;
-    border-bottom: 1px solid #404040;
+    border-bottom: 1px solid #302d2a;
 }
 
 .nav {
@@ -57,7 +57,7 @@ body {
 
 .content {
     flex: 1;
-    background: #f8f9fa;
+    background: #faf8f7;
     border-radius: 12px;
     padding: 2rem;
     min-height: 80vh;
@@ -65,8 +65,10 @@ body {
 }
 
 .sidebar {
+    margin-left: 880px;
+    position: fixed;
     width: 300px;
-    background: #f8f9fa;
+    background: #faf8f7;
     border-radius: 12px;
     padding: 2rem;
     height: fit-content;
@@ -77,20 +79,24 @@ body {
     margin-bottom: 3rem;
 }
 
-.hero h1 {
+/*.hero h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
     color: #2c3e50;
-}
+}*/
 
 .hero p {
     font-size: 1.1rem;
     color: #6c757d;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-word;
     line-height: 1.6;
+    margin-bottom: 10px;
 }
 
 .btn {
-    background: #545454;
+    background: #302d2a;
     color: white;
     border: none;
     padding: 0.75rem 1.5rem;
@@ -124,17 +130,17 @@ body {
 }
 
 .about-image {
-    width: 150px;
-    height: 150px;
+    width: 170px;
+    height: 170px;
     background: #e9ecef;
-    border-radius: 12px;
+    border-radius: 100px;
     flex-shrink: 0;
 }
 
 .about-image-jpg{
-    width: 150px;
-    height: 150px;
-    border-radius: 12px;
+    width: 170px;
+    height: 170px;
+    border-radius: 100px;
     flex-shrink: 0;
 }
 
@@ -142,6 +148,7 @@ body {
     flex: 1;
     color: #495057;
     line-height: 1.6;
+    text-align: left;
 }
 
 /* Archive Page Styles */
@@ -170,7 +177,9 @@ body {
 }
 
 img {
-    max-width: 800px;
+    max-width: 100%;
+    height: auto;
+    display: block;
     margin: 0 auto;
 }
 
@@ -273,6 +282,39 @@ img {
 .article-content pre code {
     background: none;
     padding: 0;
+}
+
+/*para citações dentro do artigo*/
+blockquote {
+  border-left: 4px solid #ccc;
+  padding-left: 1rem;
+  color: #666;
+  font-style: italic;
+  margin: 1rem 0;
+}
+
+/* para tabelas dentro do artigo*/
+.table-container {
+  overflow-x: auto;
+  max-width: 100%;
+  margin-top: 1rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  min-width: 600px;
+}
+
+th, td {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+thead {
+  background-color: #f0f0f0;
 }
 
 .back-btn {

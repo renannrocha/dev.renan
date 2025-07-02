@@ -5,11 +5,6 @@ category: "React"
 tags: ["React", "JavaScript", "Frontend"] 
 excerpt: "Aprenda a usar os React Hooks para criar componentes funcionais mais poderosos." 
 ---
-# Introdução ao React Hooks
-
-<picture>
-    <img alt="home page spider" src="../assets/mustang.png">
-</picture>
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut cursus tortor non lacus dictum iaculis. Donec viverra ac felis vel vehicula. Nulla commodo ex a justo consectetur cursus. Vestibulum posuere vitae quam ut ornare. Donec venenatis sem quis erat placerat, et egestas diam hendrerit. Maecenas quis massa finibus, molestie erat commodo, vulputate leo. Vivamus ut porttitor metus. Donec venenatis interdum diam. Curabitur faucibus, dui viverra fringilla volutpat, ipsum justo dapibus orci, et molestie lacus nisl nec dui. Aenean vitae dui malesuada, ullamcorper magna sed, efficitur magna. Sed fringilla ultrices bibendum. Duis ac ante massa.
 
@@ -27,7 +22,109 @@ Curabitur eu ultricies massa, ut auctor enim. Ut quis porta purus, id dictum era
     <img alt="home page spider" src="../assets/imgem-transformed.jpg">
 </picture>
 
+<blockquote>
+  <p>"Duis sed malesuada mi. Nam vestibulum blandit est ut fringilla. Pellentesque enim arcu, euismod vitae efficitur rhoncus, sollicitudin eget elit."</p>
+</blockquote>
+
+<div class="table-container">
+    <table>
+    <thead>
+        <tr>
+        <th>Nome</th>
+        <th>Idade</th>
+        <th>Cidade</th>
+        <th>Estado</th>
+        <th>CEP</th>
+        <th>Referencia</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+        <td>Renan</td>
+        <td>25</td>
+        <td>Fortaleza</td>
+        <td>Ceara</td>
+        <td>23</td>
+        <td>ao</td>
+        </tr>
+        <tr>
+        <td>Mariana</td>
+        <td>30</td>
+        <td>Curitiba</td>
+        <td>Parana</td>
+        <td>30</td>
+        <td>333</td>
+        </tr>
+        <tr>
+        <td>Mariana</td>
+        <td>30</td>
+        <td>Curitiba</td>
+        <td>Parana</td>
+        <td>30</td>
+        <td>333</td>
+        </tr>
+        <tr>
+        <td>Mariana</td>
+        <td>30</td>
+        <td>Curitiba</td>
+        <td>Parana</td>
+        <td>30</td>
+        <td>333</td>
+        </tr>
+    </tbody>
+    </table>
+</div>
+
 Duis sed malesuada mi. Nam vestibulum blandit est ut fringilla. Pellentesque enim arcu, euismod vitae efficitur rhoncus, sollicitudin eget elit. Cras nec mauris ac ipsum vulputate gravida non in tellus. Aliquam sed mauris ultrices, hendrerit nulla efficitur, aliquam erat. Nam sodales ligula odio, eget lobortis ligula iaculis sed. Pellentesque hendrerit porttitor eros, eget feugiat erat blandit ac. Sed ultricies dui sit amet condimentum ullamcorper. In posuere eleifend molestie.
+
+<div class="table-container">
+    <table>
+    <thead>
+        <tr>
+        <th>Nome</th>
+        <th>Idade</th>
+        <th>Cidade</th>
+        <th>Estado</th>
+        <th>CEP</th>
+        <th>Referencia</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+        <td>Renan</td>
+        <td>25</td>
+        <td>Fortaleza</td>
+        <td>Ceara</td>
+        <td>23</td>
+        <td>ao</td>
+        </tr>
+        <tr>
+        <td>Mariana</td>
+        <td>30</td>
+        <td>Curitiba</td>
+        <td>Parana</td>
+        <td>30</td>
+        <td>333</td>
+        </tr>
+        <tr>
+        <td>Mariana</td>
+        <td>30</td>
+        <td>Curitiba</td>
+        <td>Parana</td>
+        <td>30</td>
+        <td>333</td>
+        </tr>
+        <tr>
+        <td>Mariana</td>
+        <td>30</td>
+        <td>Curitiba</td>
+        <td>Parana</td>
+        <td>30</td>
+        <td>333</td>
+        </tr>
+    </tbody>
+    </table>
+</div>
 
 ```java
 public class MaiorNumero {
@@ -62,3 +159,6 @@ Nam euismod sollicitudin lacus eget tristique. Integer tristique, velit ac vesti
 
 Mais conteúdo...
 
+<picture>
+    <img alt="home page spider" src="../assets/mustang.png">
+</picture>
