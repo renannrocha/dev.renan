@@ -4,8 +4,7 @@ let currentFilteredArticles = [];
 
 // List of markdown files to load (you can also make this dynamic)
 const markdownFiles = [
-    'react-hooks.md', 
-    'func-markdown.md',
+    'template-article.md',
     '02-07-2025-A01-IMPLEMENTANDO-SISTEMA-DE-ASSINATURA-E-PAGAMENTO-COM-STRIPE.md'
 ];
 
