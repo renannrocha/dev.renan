@@ -2,7 +2,7 @@
 let articles = [];
 let currentFilteredArticles = [];
 
-// List of markdown files to load (you can also make this dynamic)
+// List of markdown files to load
 const markdownFiles = [
     'template-article.md',
     '02-07-2025-A01-IMPLEMENTANDO-SISTEMA-DE-ASSINATURA-E-PAGAMENTO-COM-STRIPE.md'
@@ -52,10 +52,21 @@ function parseFrontmatter(content) {
     };
 }
 
+// Generate slug from title or filename
+function generateSlug(title, filename) {
+    const text = title || filename.replace('.md', '');
+    return text
+        .toLowerCase()
+        .replace(/[^a-z0-9\s-]/g, '')
+        .replace(/\s+/g, '-')
+        .replace(/-+/g, '-')
+        .trim();
+}
+
 // Load a single markdown file
 async function loadMarkdownFile(filename) {
     try {
-        const response = await fetch(`articles/${filename}`);
+        const response = await fetch(`/articles/${filename}`);
         if (!response.ok) {
             throw new Error(`Failed to load ${filename}`);
         }
@@ -63,14 +74,18 @@ async function loadMarkdownFile(filename) {
         const content = await response.text();
         const { metadata, content: markdownContent } = parseFrontmatter(content);
         
+        const title = metadata.title || filename.replace('.md', '').replace(/-/g, ' ');
+        const slug = generateSlug(title, filename);
+        
         // Generate excerpt if not provided
         const excerpt = metadata.excerpt || 
             markdownContent.replace(/#{1,6}\s+/g, '').substring(0, 150) + '...';
         
         return {
             id: filename.replace('.md', ''),
+            slug: slug,
             filename: filename,
-            title: metadata.title || filename.replace('.md', '').replace(/-/g, ' '),
+            title: title,
             excerpt: excerpt,
             date: metadata.date || new Date().toISOString().split('T')[0],
             category: metadata.category || 'Geral',
@@ -89,8 +104,8 @@ async function loadAllArticles() {
     const loadingState = document.getElementById('loadingState');
     const articlesGrid = document.getElementById('articlesGrid');
     
-    loadingState.style.display = 'block';
-    articlesGrid.style.display = 'none';
+    if (loadingState) loadingState.style.display = 'block';
+    if (articlesGrid) articlesGrid.style.display = 'none';
     
     try {
         const articlePromises = markdownFiles.map(loadMarkdownFile);
@@ -108,43 +123,68 @@ async function loadAllArticles() {
         
     } catch (error) {
         console.error('Error loading articles:', error);
-        articlesGrid.innerHTML = '<p>Erro ao carregar artigos.</p>';
+        if (articlesGrid) articlesGrid.innerHTML = '<p>Erro ao carregar artigos.</p>';
     } finally {
-        loadingState.style.display = 'none';
-        articlesGrid.style.display = 'grid';
+        if (loadingState) loadingState.style.display = 'none';
+        if (articlesGrid) articlesGrid.style.display = 'grid';
     }
 }
 
-// Navigation functionality
-function showPage(pageName) {
+// Navigation with URL routing
+function navigateTo(path) {
+    history.pushState(null, '', path);
+    handleRoute();
+}
+
+function handleRoute() {
+    const path = window.location.pathname;
+    const segments = path.split('/').filter(Boolean);
+    
     // Hide all pages
     document.querySelectorAll('.page').forEach(page => {
         page.classList.remove('active');
     });
     
-    // Show selected page
-    document.getElementById(pageName).classList.add('active');
-    
     // Update navigation
     document.querySelectorAll('.nav-link').forEach(link => {
         link.classList.remove('active');
     });
-    
-    const navLink = document.querySelector(`[data-page="${pageName}"]`);
-    if (navLink) {
-        navLink.classList.add('active');
-    }
-    
-    // Load articles when showing archive
-    if (pageName === 'archive' && articles.length === 0) {
-        loadAllArticles();
+
+    if (path === '/' || path === '') {
+        // Home page
+        document.getElementById('home').classList.add('active');
+        document.querySelector('[data-page="home"]').classList.add('active');
+        document.title = 'Renan Rocha - Blog de Desenvolvimento';
+    } else if (path === '/archive') {
+        // Archive page
+        document.getElementById('archive').classList.add('active');
+        document.querySelector('[data-page="archive"]').classList.add('active');
+        document.title = 'Arquivo - Renan Rocha';
+        
+        if (articles.length === 0) {
+            loadAllArticles();
+        }
+    } else if (segments[0] === 'article' && segments[1]) {
+        // Article view page
+        const slug = segments[1];
+        showArticleBySlug(slug);
+    } else {
+        // 404 - redirect to home
+        navigateTo('/');
     }
 }
 
-// Show individual article
-async function showArticle(articleId) {
-    const article = articles.find(a => a.id === articleId);
-    if (!article) return;
+// Show individual article by slug
+async function showArticleBySlug(slug) {
+    if (articles.length === 0) {
+        await loadAllArticles();
+    }
+    
+    const article = articles.find(a => a.slug === slug);
+    if (!article) {
+        navigateTo('/');
+        return;
+    }
     
     const articleContent = document.getElementById('articleContent');
     
@@ -167,12 +207,27 @@ async function showArticle(articleId) {
         </div>
     `;
     
-    showPage('article-view');
+    document.getElementById('article-view').classList.add('active');
+    document.title = `${article.title} - Renan Rocha`;
+}
+
+// Show individual article (legacy)
+async function showArticle(articleId) {
+    if (articles.length === 0) {
+        await loadAllArticles();
+    }
+    
+    const article = articles.find(a => a.id === articleId);
+    if (!article) return;
+    
+    navigateTo(`/article/${article.slug}`);
 }
 
 // Populate articles in archive page
 function populateArticles(articlesToShow) {
     const grid = document.getElementById('articlesGrid');
+    if (!grid) return;
+    
     grid.innerHTML = '';
     
     if (articlesToShow.length === 0) {
@@ -196,7 +251,7 @@ function populateArticles(articlesToShow) {
         `;
         
         articleCard.addEventListener('click', () => {
-            showArticle(article.id);
+            navigateTo(`/article/${article.slug}`);
         });
         
         grid.appendChild(articleCard);
@@ -209,11 +264,13 @@ function populateSidebar() {
     
     // Recent posts
     const recentPosts = document.getElementById('recentPosts');
-    const recentArticles = articles.slice(0, 5);
-    
-    recentPosts.innerHTML = recentArticles.map(article => `
-        <li><a href="#" onclick="showArticle('${article.id}')">${article.title}</a></li>
-    `).join('');
+    if (recentPosts) {
+        const recentArticles = articles.slice(0, 5);
+        
+        recentPosts.innerHTML = recentArticles.map(article => `
+            <li><a href="/article/${article.slug}" onclick="navigateTo('/article/${article.slug}'); return false;">${article.title}</a></li>
+        `).join('');
+    }
     
     // Categories
     const categories = {};
@@ -222,19 +279,23 @@ function populateSidebar() {
     });
     
     const categoryList = document.getElementById('categoryList');
-    categoryList.innerHTML = Object.entries(categories).map(([category, count]) => `
-        <li>
-            <a href="#" onclick="filterByCategory('${category}')">
-                <span>${category}</span>
-                <span class="category-count">${count}</span>
-            </a>
-        </li>
-    `).join('');
+    if (categoryList) {
+        categoryList.innerHTML = Object.entries(categories).map(([category, count]) => `
+            <li>
+                <a href="#" onclick="filterByCategory('${category}'); return false;">
+                    <span>${category}</span>
+                    <span class="category-count">${count}</span>
+                </a>
+            </li>
+        `).join('');
+    }
 }
 
 // Search functionality
 function setupSearch() {
     const searchInput = document.getElementById('searchInput');
+    if (!searchInput) return;
+    
     searchInput.addEventListener('input', (e) => {
         const query = e.target.value.toLowerCase();
         const filteredArticles = articles.filter(article => 
@@ -250,11 +311,18 @@ function setupSearch() {
 
 // Filter by category
 function filterByCategory(category) {
-    showPage('archive');
+    if (window.location.pathname !== '/archive') {
+        navigateTo('/archive');
+        setTimeout(() => filterByCategory(category), 100);
+        return;
+    }
+    
     const filteredArticles = articles.filter(article => article.category === category);
     currentFilteredArticles = filteredArticles;
     populateArticles(filteredArticles);
-    document.getElementById('searchInput').value = '';
+    
+    const searchInput = document.getElementById('searchInput');
+    if (searchInput) searchInput.value = '';
 }
 
 // Format date
@@ -265,26 +333,36 @@ function formatDate(dateString) {
 
 // Initialize the application
 document.addEventListener('DOMContentLoaded', () => {
-    // Navigation
+    // Navigation with routing
     document.querySelectorAll('.nav-link').forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
-            showPage(link.dataset.page);
+            const href = link.getAttribute('href');
+            navigateTo(href);
         });
     });
+    
+    // Handle browser back/forward buttons
+    window.addEventListener('popstate', handleRoute);
     
     // Setup search
     setupSearch();
     
     // Configure marked.js options
-    marked.setOptions({
-        highlight: function(code, lang) {
-            // You can add syntax highlighting here if needed
-            return code;
-        },
-        breaks: true,
-        gfm: true
-    });
+    if (typeof marked !== 'undefined') {
+        marked.setOptions({
+            highlight: function(code, lang) {
+                return code;
+            },
+            breaks: true,
+            gfm: true
+        });
+    }
+    
+    // Initial route handling
+    handleRoute();
+    
+    // Load articles on startup
     loadAllArticles();
 });
 

@@ -4,6 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Renan Rocha</title>
+    <meta name="description" content="Blog sobre programação, arquitetura de software e desenvolvimento back-end" />
+    <meta name="author" content="Renan Rocha" />
+
+    <meta property="og:title" content="Renan Rocha - Blog de Desenvolvimento" />
+    <meta property="og:description" content="Artigos sobre programação, arquitetura de software e desenvolvimento back-end" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/assets/banner.gif" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="/assets/banner.gif" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,30 +22,27 @@
             <nav class="nav">
                 <div class="logo">renan.dev</div>
                 <div class="nav-links">
-                    <a href="#" class="nav-link active" data-page="home">Home</a>
-                    <a href="#" class="nav-link" data-page="archive">Archive</a>
+                    <a href="/" class="nav-link" data-page="home">Home</a>
+                    <a href="/archive" class="nav-link" data-page="archive">Archive</a>
                 </div>
             </nav>
         </div>
     </header>
     
-
     <main class="container">
         <div class="main">
             <div class="content">
                 <!-- Home Page -->
                 <div id="home" class="page active">
-                    
                     <div class="hero">
                         <div class="bannerlayout">
                             <img src="/assets/banner.gif" alt="gif banner" class="gifbanner">
                         </div>
-                        <!--<h1>Marcio Renan</h1>-->
                         <p><b>Seja bem vindo!</b>👋</p>
                         <p>Aqui você vai encontrar artigos sobre programação, arquitetura de software, boas práticas, ferramentas que uso no dia a dia, e reflexões sobre a minha rotina. Tudo escrito de forma direta, sem rodeios — como se fosse uma boa conversa entre colegas de profissão.</p>
                         <p>Meu objetivo é simples: registrar o que aprendo, compartilhar o que sei e, quem sabe, ajudar você a compreender melhor sobre algum assunto.</p>
                         <p>Então, fique à vontade. Leia, explore, comente, critique. Esse espaço também é seu.</p>
-                        <a href="#" class="btn" onclick="showPage('archive')">explorar artigos</a>
+                        <a href="#" class="btn" onclick="navigateTo('/archive'); return false;">explorar artigos</a>
                     </div>
                     
                     <hr>
@@ -44,7 +51,7 @@
                         <h2>Sobre mim</h2>
                         <div class="about-content">
                             <div class="about-image">
-                                <img class="about-image-jpg" src="/assets/icon.jpg" alt="image">
+                                <img class="about-image-jpg" src="/assets/icon.jpg" alt="Marcio Renan">
                             </div>
                             <div class="about-text">
                                 <p>Meu nome é Marcio Renan, sou desenvolvedor back-end e também estudante universitário. Já atuo na área de desenvolvimento há um bom tempo, e ao longo da minha jornada participei de projetos que me proporcionaram ótimas experiências e muitos aprendizados.</p>
@@ -66,13 +73,13 @@
                     </div>
 
                     <div class="articles-grid" id="articlesGrid" style="display: none;">
-                        <!-- Articles will be populatFed here -->
+                        <!-- Articles will be populated here -->
                     </div>
                 </div>
 
                 <!-- Article View Page -->
                 <div id="article-view" class="page">
-                    <button class="back-btn" onclick="showPage('archive')">← Voltar aos artigos</button>
+                    <button class="back-btn" onclick="navigateTo('/archive')">← Voltar aos artigos</button>
                     <div class="article-view" id="articleContent">
                         <!-- Article content will be loaded here -->
                     </div>
@@ -115,7 +122,6 @@
             <p>&copy; 2025 renan.dev — Todos os direitos reservados.</p>
         </div>
     </footer>
-
 
     <!-- Marked.js for Markdown parsing -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.3.0/marked.min.js"></script>
