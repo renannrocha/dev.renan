@@ -180,6 +180,63 @@ body {
     text-align: left;
 }
 
+/*footer*/
+
+.footer {
+    background-color: #1e1e1e;
+    color: #ccc;
+    padding: 2rem 0 1rem;
+    font-size: 0.95rem;
+    margin-top: 3rem;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40rem;
+    margin-left: 23rem;
+}
+
+.footer-about {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-social {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-social ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-social li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-social a {
+    color: #4f9eff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-social a:hover {
+    color: #fff;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    border-top: 1px solid #333;
+    padding-top: 1rem;
+    font-size: 0.85rem;
+    color: #888;
+}
+
 /* Archive Page Styles */
 .search-container {
     margin-bottom: 2rem;
