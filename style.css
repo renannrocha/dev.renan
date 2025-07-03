@@ -87,9 +87,9 @@ body {
 .content {
     flex: 1;
     background: #faf8f7;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     border-radius: 12px;
     padding: 2rem;
-    min-height: 80vh;
     max-width: 865px;
 }
 
@@ -100,7 +100,7 @@ body {
     border-radius: 12px;
     padding: 2rem;
     height: fit-content;
-    margin-top: 2rem;
+    margin-top: 0rem;
 }
 
 /* Home Page Styles */
@@ -109,7 +109,7 @@ body {
 }
 
 .hero h2 {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     color: #2c3e50;
 }
 
