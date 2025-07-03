@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Renan Rocha</title>
+    <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
     <meta name="description" content="Blog sobre programação, arquitetura de software e desenvolvimento back-end" />
     <meta name="author" content="Renan Rocha" />
 
-    <meta property="og:title" content="Renan Rocha - Blog de Desenvolvimento" />
+    <meta property="og:title" content="Renan Rocha" />
     <meta property="og:description" content="Artigos sobre programação, arquitetura de software e desenvolvimento back-end" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="/assets/banner.gif" />
@@ -20,7 +21,9 @@
     <header class="header">
         <div class="container">
             <nav class="nav">
-                <div class="logo">renan.dev</div>
+                <div class="logo">
+                    dev.renan
+                </div>
                 <div class="nav-links">
                     <a href="/" class="nav-link" data-page="home">Home</a>
                     <a href="/archive" class="nav-link" data-page="archive">Archive</a>
@@ -38,15 +41,13 @@
                         <div class="bannerlayout">
                             <img src="/assets/banner.gif" alt="gif banner" class="gifbanner">
                         </div>
-                        <p><b>Seja bem vindo!</b>👋</p>
+                        <h2>Seja bem vindo 👋</h2>
                         <p>Aqui você vai encontrar artigos sobre programação, arquitetura de software, boas práticas, ferramentas que uso no dia a dia, e reflexões sobre a minha rotina. Tudo escrito de forma direta, sem rodeios — como se fosse uma boa conversa entre colegas de profissão.</p>
                         <p>Meu objetivo é simples: registrar o que aprendo, compartilhar o que sei e, quem sabe, ajudar você a compreender melhor sobre algum assunto.</p>
                         <p>Então, fique à vontade. Leia, explore, comente, critique. Esse espaço também é seu.</p>
-                        <a href="#" class="btn" onclick="navigateTo('/archive'); return false;">explorar artigos</a>
+                        <!--<a href="#" class="btn" onclick="navigateTo('/archive'); return false;">Explorar</a>-->
                     </div>
-                    
                     <hr>
-
                     <div class="about">
                         <h2>Sobre mim</h2>
                         <div class="about-content">
@@ -79,7 +80,7 @@
 
                 <!-- Article View Page -->
                 <div id="article-view" class="page">
-                    <button class="back-btn" onclick="navigateTo('/archive')">← Voltar aos artigos</button>
+                    <button class="back-btn" onclick="navigateTo('/archive')">Voltar</button>
                     <div class="article-view" id="articleContent">
                         <!-- Article content will be loaded here -->
                     </div>
@@ -103,11 +104,12 @@
             </aside>
         </div>
     </main>
-
+    
+    <!--
     <footer class="footer">
         <div class="container footer-content">
             <div class="footer-about">
-                <h3>renan.dev</h3>
+                <h3>dev.renan</h3>
             </div>
             <div class="footer-social">
                 <h4>Conecte-se</h4>
@@ -119,9 +121,10 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2025 renan.dev — Todos os direitos reservados.</p>
+            <p>&copy; 2025 renan.dev</p>
         </div>
     </footer>
+    -->
 
     <!-- Marked.js for Markdown parsing -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.3.0/marked.min.js"></script>

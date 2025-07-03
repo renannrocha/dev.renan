@@ -4,8 +4,8 @@ let currentFilteredArticles = [];
 
 // List of markdown files to load
 const markdownFiles = [
-    'template-article.md',
-    '02-07-2025-A01-IMPLEMENTANDO-SISTEMA-DE-ASSINATURA-E-PAGAMENTO-COM-STRIPE.md'
+    //'template-article.md',
+    //'02-07-2025-A01-IMPLEMENTANDO-SISTEMA-DE-ASSINATURA-E-PAGAMENTO-COM-STRIPE.md'
 ];
 
 // Parse frontmatter from markdown content
@@ -154,12 +154,12 @@ function handleRoute() {
         // Home page
         document.getElementById('home').classList.add('active');
         document.querySelector('[data-page="home"]').classList.add('active');
-        document.title = 'Renan Rocha - Blog de Desenvolvimento';
+        document.title = 'Renan Rocha';
     } else if (path === '/archive') {
         // Archive page
         document.getElementById('archive').classList.add('active');
         document.querySelector('[data-page="archive"]').classList.add('active');
-        document.title = 'Arquivo - Renan Rocha';
+        document.title = 'Renan Rocha - Archives';
         
         if (articles.length === 0) {
             loadAllArticles();
@@ -208,7 +208,7 @@ async function showArticleBySlug(slug) {
     `;
     
     document.getElementById('article-view').classList.add('active');
-    document.title = `${article.title} - Renan Rocha`;
+    document.title = `Renan Rocha - ${article.title}`;
 }
 
 // Show individual article (legacy)
