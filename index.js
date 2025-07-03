@@ -195,7 +195,7 @@ async function showArticleBySlug(slug) {
         <div class="article-header">
             <h1>${article.title}</h1>
             <div class="article-meta">
-                <span>${formatDate(article.date)}</span>
+                <span>Postado em ${formatDate(article.date)}</span>
                 <span>${article.category}</span>
             </div>
             <div style="margin-top: 1rem;">
@@ -241,7 +241,7 @@ function populateArticles(articlesToShow) {
         articleCard.innerHTML = `
             <div class="article-title">${article.title}</div>
             <div class="article-meta">
-                <span>${formatDate(article.date)}</span>
+                <span>Postado em ${formatDate(article.date)}</span>
                 <span>${article.category}</span>
             </div>
             <div class="article-excerpt">${article.excerpt}</div>
