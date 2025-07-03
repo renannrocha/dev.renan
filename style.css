@@ -42,7 +42,6 @@ body {
 .nav-links {
     display: flex;
     gap: 2rem;
-    margin-right: 23rem;
 }
 
 .nav-link {
