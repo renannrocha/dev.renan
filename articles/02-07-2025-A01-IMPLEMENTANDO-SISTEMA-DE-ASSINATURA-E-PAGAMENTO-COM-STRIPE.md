@@ -18,7 +18,9 @@ Como tínhamos um prazo apertado para entregar a primeira versão do projeto, ap
 
 ## Sobre o Stripe
 
--imagem aqui-
+<picture>
+    <img alt="stripe img 1" src="../assets/stripe-img1.png">
+</picture>
 
 O Stripe é uma plataforma global de pagamentos amplamente utilizada por empresas de todos os tamanhos para processar pagamentos online de forma rápida, segura e escalável. Com suporte a mais de 135 moedas e diversos métodos de pagamento, como cartões de crédito, débito, PIX e carteiras digitais, o Stripe facilita a integração de sistemas de cobrança e gerenciamento de assinaturas recorrentes em aplicações web e mobile. Sua API robusta e bem documentada permite que desenvolvedores criem experiências de pagamento personalizadas com facilidade — o que a torna uma das soluções favoritas do mercado para e-commerce, SaaS e marketplaces.
 
