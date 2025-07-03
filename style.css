@@ -311,7 +311,8 @@ img {
     padding: 0.25rem 0.75rem;
     border-radius: 16px;
     font-size: 0.8rem;
-    margin-right: 0.5rem;
+    margin-right: 0.4rem;
+    margin-bottom: 0.4rem;
 }
 
 /* Article View Styles */
