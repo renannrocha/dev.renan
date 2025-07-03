@@ -152,23 +152,17 @@ body {
 
 .about-content {
     display: flex;
-    gap: 2rem;
     align-items: flex-start;
+    gap: 2rem;
+    flex-wrap: wrap;
 }
 
-.about-image {
+.about-image-jpg {
     width: 170px;
-    height: 170px;
-    background: #e9ecef;
+    height: auto;
     border-radius: 10px;
     flex-shrink: 0;
-}
-
-.about-image-jpg{
-    width: 170px;
-    height: 170px;
-    border-radius: 10px;
-    flex-shrink: 0;
+    display: block;
 }
 
 .about-text {
@@ -176,6 +170,7 @@ body {
     color: #495057;
     line-height: 1.6;
     text-align: left;
+    align-self: stretch;
 }
 
 /*footer*/
@@ -532,7 +527,13 @@ thead {
 
     .about-content {
         flex-direction: column;
+        align-items: center;
         text-align: center;
+    }
+
+    .about-text {
+        width: 100%;
+        text-align: left;
     }
 
     .nav-links {
@@ -541,5 +542,20 @@ thead {
 
     .hero h1 {
         font-size: 2rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    .main {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        margin-top: 2rem;
+    }
+
+    .content {
+        max-width: 100%;
     }
 }
