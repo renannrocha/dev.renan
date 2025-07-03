@@ -241,7 +241,7 @@ function populateArticles(articlesToShow) {
         articleCard.innerHTML = `
             <div class="article-title">${article.title}</div>
             <div class="article-meta">
-                <span>Postado em ${formatDate(article.date)}</span>
+                <span>${formatDate(article.date)}</span>
                 <span>${article.category}</span>
             </div>
             <div class="article-excerpt">${article.excerpt}</div>
