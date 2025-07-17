@@ -5,7 +5,8 @@ let currentFilteredArticles = [];
 // List of markdown files to load
 const markdownFiles = [
     //'template-article.md',
-    //'02-07-2025-A01-IMPLEMENTANDO-SISTEMA-DE-ASSINATURA-E-PAGAMENTO-COM-STRIPE.md'
+    //'02-07-2025-A01-IMPLEMENTANDO-SISTEMA-DE-ASSINATURA-E-PAGAMENTO-COM-STRIPE.md',
+    //'17-07-2025-A02-ENTENDA-A-GRANULARIDADE-NA-POO.md'
 ];
 
 // Parse frontmatter from markdown content
@@ -352,7 +353,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (typeof marked !== 'undefined') {
         marked.setOptions({
             highlight: function(code, lang) {
-                return code;
+                return hljs.highlight(code, { language: lang }).value;
             },
             breaks: true,
             gfm: true

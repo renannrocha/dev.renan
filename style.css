@@ -362,6 +362,16 @@ img {
     margin-bottom: 0.5rem;
 }
 
+.article-content ol {
+    padding-left: 1rem;
+    list-style-position: inside;
+    margin-bottom: 1rem;
+}
+
+.article-content ol li {
+    margin-bottom: 0.5rem;
+}
+
 .article-content code {
     background: #f1f3f4;
     padding: 0.2rem 0.4rem;
@@ -378,8 +388,23 @@ img {
 }
 
 .article-content pre code {
-    background: none;
-    padding: 0;
+  display: block;
+  padding: none;
+  border-radius: 8px;
+  background: none;
+  padding: 1rem;
+  color: inherit; /* fallback se o theme não carregar */
+  overflow-x: auto;
+  font-size: 0.95rem;
+  font-family: 'Fira Code', monospace;
+}
+
+.hljs {
+  background: #282c34; 
+  color: #abb2bf;
+  padding: 1em;
+  border-radius: 8px;
+  overflow-x: auto;
 }
 
 /*para citações dentro do artigo*/
