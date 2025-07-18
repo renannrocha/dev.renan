@@ -2,15 +2,19 @@
 title: "Granularidade: A Arte de Quebrar o Sistema no Tamanho Certo" 
 date: "2025-07-17" 
 category: "Arquitetura de Software" 
-tags: ["orientação a objetos", "granularidade", "design de software", "arquitetura orientada a objetos", "boas práticas", "SOLID", "coesão", "acoplamento", "refatoração", "engenharia de software"] 
+tags: ["orientação a objetos", "design de software", "arquitetura orientada a objetos", "boas práticas", "SOLID", "acoplamento", "refatoração", "engenharia de software"] 
 excerpt: "Ao projetar sistemas orientados a objetos, uma das maiores dificuldades está em decidir até onde devemos dividir o sistema. Essa decisão tem nome: granularidade." 
 ---
 
+Projetar um sistema orientado a objetos vai muito além de simplesmente criar classes e distribuir métodos. Uma das decisões mais difíceis e também mais cruciais está em como quebrar o sistema em partes menores, ou seja, como decompor o domínio em objetos e responsabilidades bem definidas.
+
+Essa tarefa envolve diversas variáveis: encapsulamento, acoplamento, coesão, performance, reusabilidade e flexibilidade. No centro disso tudo está um conceito que, embora pouco discutido diretamente, tem um impacto profundo na qualidade da arquitetura: **granularidade**.
+
 ## O que é granularidade na orientação a objetos?
 
-Granularidade, no contexto da programação orientada a objetos, representa o **nível de divisão ou fragmentação** de um sistema em seus componentes — especialmente em **classes e objetos**.
+Granularidade, no contexto da programação orientada a objetos, representa o nível de divisão ou fragmentação de um sistema em seus componentes — especialmente em classes e objetos.
 
-É como decidir se uma classe deve fazer **várias coisas** ou **uma coisa só**.
+> É como decidir se uma classe deve fazer **várias coisas** ou **uma coisa só**.
 
 ### Alta vs. Baixa granularidade
 
@@ -29,7 +33,7 @@ Ambas as abordagens são válidas dependendo do contexto, mas ignorar essa decis
 
 ### Uma analogia simples
 
-Pense em **granularidade como o tamanho das peças de um quebra-cabeça**:
+Pense em granularidade como o tamanho das peças de um quebra-cabeça:
 
 - Peças grandes (baixa granularidade) são fáceis de manusear e montam a imagem rapidamente, mas oferecem menos precisão.
 - Peças pequenas (alta granularidade) oferecem mais detalhe e flexibilidade, mas exigem mais tempo e atenção para montar.
@@ -142,7 +146,7 @@ Granularidade não é algo fixo — **depende do contexto**. Mas há algumas boa
 
 ## Conclusão
 
-Granularidade é uma daquelas decisões arquiteturais que não costumam ganhar destaque — mas fazem **toda a diferença** na qualidade de um sistema orientado a objetos.
+Granularidade é uma daquelas decisões arquiteturais que não costumam ganhar destaque mas fazem **toda a diferença** na qualidade de um sistema orientado a objetos.
 
 Ao entender como dividir seu sistema no "tamanho certo", você constrói **software mais limpo, flexível e sustentável**.
 
@@ -150,12 +154,3 @@ Nem tudo precisa ser micro, e nem tudo precisa ser monolítico: o segredo está 
 
 > Reflita: como estão as classes do seu projeto hoje? Estão grandes demais? Ou fragmentadas além da conta?
 > 
-
----
-
-## Referências
-
-- *Clean Code* – Robert C. Martin
-- *Domain-Driven Design* – Eric Evans
-- *Refactoring: Improving the Design of Existing Code* – Martin Fowler
-- Artigos no Medium, Dev.to, Stack Overflow

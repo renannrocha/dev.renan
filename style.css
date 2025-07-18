@@ -391,20 +391,12 @@ img {
   display: block;
   padding: none;
   border-radius: 8px;
-  background: none;
+  background: #282c34;
   padding: 1rem;
-  color: inherit; /* fallback se o theme não carregar */
+  color: #abb2bf;
   overflow-x: auto;
   font-size: 0.95rem;
   font-family: 'Fira Code', monospace;
-}
-
-.hljs {
-  background: #282c34; 
-  color: #abb2bf;
-  padding: 1em;
-  border-radius: 8px;
-  overflow-x: auto;
 }
 
 /*para citações dentro do artigo*/

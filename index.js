@@ -6,7 +6,7 @@ let currentFilteredArticles = [];
 const markdownFiles = [
     //'template-article.md',
     //'02-07-2025-A01-IMPLEMENTANDO-SISTEMA-DE-ASSINATURA-E-PAGAMENTO-COM-STRIPE.md',
-    //'17-07-2025-A02-ENTENDA-A-GRANULARIDADE-NA-POO.md'
+    '17-07-2025-A02-ENTENDA-A-GRANULARIDADE-NA-POO.md'
 ];
 
 // Parse frontmatter from markdown content
