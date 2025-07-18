@@ -6,6 +6,10 @@ tags: ["orientação a objetos", "design de software", "arquitetura orientada a 
 excerpt: "Ao projetar sistemas orientados a objetos, uma das maiores dificuldades está em decidir até onde devemos dividir o sistema. Essa decisão tem nome: granularidade." 
 ---
 
+<picture>
+    <img alt="stripe img 1" src="../assets/image_banner_A02.png">
+</picture>
+
 Projetar um sistema orientado a objetos vai muito além de simplesmente criar classes e distribuir métodos. Uma das decisões mais difíceis e também mais cruciais está em como quebrar o sistema em partes menores, ou seja, como decompor o domínio em objetos e responsabilidades bem definidas.
 
 Essa tarefa envolve diversas variáveis: encapsulamento, acoplamento, coesão, performance, reusabilidade e flexibilidade. No centro disso tudo está um conceito que, embora pouco discutido diretamente, tem um impacto profundo na qualidade da arquitetura: **granularidade**.
