@@ -6,8 +6,8 @@
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    background: #faf8f7;
-    color: #333;
+    background: #121212;
+    color: #e0e0e0;
     min-height: 100vh;
 }
 
@@ -19,9 +19,9 @@ body {
 
 /* Header */
 .header {
-    background: #faf8f7;
+    background: #121212;
     padding: 1rem 0;
-    border-bottom: 1px solid #faf8f7;
+    border-bottom: 1px solid #121212;
 }
 
 .nav {
@@ -32,9 +32,9 @@ body {
     width: 100%;
 }
 
-.logo{
+.logo {
     font-size: 1.5rem;
-    color: #3d3d3d;
+    color: #e0e0e0;
 }
 
 .nav-links {
@@ -43,7 +43,7 @@ body {
 }
 
 .nav-link {
-    color: #3d3d3d;
+    color: #bbbbbb;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
@@ -66,7 +66,7 @@ body {
 .bannerlayout {
     width: 100%;
     height: 200px;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
     border-radius: 10px;
     overflow: hidden; 
     display: flex;
@@ -85,21 +85,21 @@ body {
 
 .content {
     flex: 1;
-    background: #faf8f7;
-    /*box-shadow: 0 2px 8px rgba(0,0,0,0.1);*/
+    background: #121212;
     border-radius: 12px;
-    padding: 2rem;
+    padding: 0rem;
     max-width: 865px;
+    min-height: calc(100vh - 80px - 60px);
 }
 
 .sidebar {
     width: 300px;
-    background: #faf8f7;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    background: #1e1e1e;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.6);
     border-radius: 12px;
     padding: 2rem;
     height: fit-content;
-    margin-top: 2rem;
+    margin-top: 0rem;
 }
 
 /* Home Page Styles */
@@ -109,12 +109,12 @@ body {
 
 .hero h2 {
     margin-bottom: 1rem;
-    color: #2c3e50;
+    color: #e0e0e0;
 }
 
 .hero p {
     font-size: 1.1rem;
-    color: #6c757d;
+    color: #cccccc;
     word-wrap: break-word;
     overflow-wrap: break-word;
     word-break: break-word;
@@ -122,8 +122,8 @@ body {
 }
 
 .btn {
-    background: #302d2a;
-    color: white;
+    background: #333333;
+    color: #e0e0e0;
     border: none;
     padding: 0.75rem 1.5rem;
     border-radius: 8px;
@@ -136,7 +136,7 @@ body {
 }
 
 .btn:hover {
-    background: #3d8ce6;
+    background: #4f9eff;
 }
 
 .about {
@@ -145,7 +145,7 @@ body {
 
 .about h2 {
     margin-bottom: 1.5rem;
-    color: #2c3e50;
+    color: #e0e0e0;
 }
 
 .about-content {
@@ -165,17 +165,16 @@ body {
 
 .about-text {
     flex: 1;
-    color: #495057;
+    color: #e0e0e0;
     line-height: 1.6;
     text-align: left;
     align-self: stretch;
 }
 
-/*footer*/
-
+/* Footer */
 .footer {
-    background-color: #eeeeee;
-    color: #757575;
+    background-color: #1f1f1f;
+    color: #888;
     padding: 2rem 0 1rem;
     font-size: 0.95rem;
 }
@@ -198,7 +197,7 @@ body {
     padding-left: 32px;
 }
 
-.footer-social h4{
+.footer-social h4 {
     margin-bottom: 10px;
 }
 
@@ -213,7 +212,7 @@ body {
 }
 
 .footer-social a {
-    color: #888;
+    color: #bbbbbb;
     text-decoration: none;
     transition: color 0.3s;
 }
@@ -225,7 +224,7 @@ body {
 .footer-bottom {
     text-align: center;
     margin-top: 2rem;
-    border-top: 1px solid #d8d8d8;
+    border-top: 1px solid #333;
     padding-top: 1rem;
     font-size: 0.85rem;
     color: #888;
@@ -239,12 +238,17 @@ body {
 .search-bar {
     width: 100%;
     padding: 1rem;
-    border: 2px solid #e9ecef;
+    border: 2px solid #444;
     border-radius: 50px;
     font-size: 1rem;
-    background: white;
+    background: #1e1e1e;
+    color: #e0e0e0;
     outline: none;
     transition: border-color 0.3s ease;
+}
+
+.search-bar::placeholder {
+    color: #888888;
 }
 
 .search-bar:focus {
@@ -263,7 +267,7 @@ img {
     margin: 5px auto;
 }
 
-.article-gifs{
+.article-gifs {
     width: 100%;
     height: auto;
     display: block;
@@ -271,23 +275,23 @@ img {
 }
 
 .article-card {
-    background: white;
+    background: #1e1e1e;
     border-radius: 12px;
     padding: 1.5rem;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.6);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
 }
 
 .article-card:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.8);
 }
 
 .article-title {
     font-size: 1.3rem;
     font-weight: bold;
-    color: #2c3e50;
+    color: #e0e0e0;
     margin-bottom: 0.5rem;
 }
 
@@ -295,19 +299,19 @@ img {
     display: flex;
     gap: 1rem;
     font-size: 0.9rem;
-    color: #6c757d;
+    color: #cccccc;
     margin-bottom: 1rem;
 }
 
 .article-excerpt {
-    color: #495057;
+    color: #cccccc;
     line-height: 1.6;
 }
 
 .tag {
     display: inline-block;
-    background: #e3f2fd;
-    color: #1976d2;
+    background: #333333;
+    color: #4f9eff;
     padding: 0.25rem 0.75rem;
     border-radius: 16px;
     font-size: 0.8rem;
@@ -326,17 +330,17 @@ img {
 
 .article-content {
     line-height: 1.7;
-    color: #333;
+    color: #e0e0e0;
 }
 
 .article-content h1, .article-content h2, .article-content h3 {
-    color: #2c3e50;
+    color: #e0e0e0;
     margin: 1.5rem 0 1rem 0;
 }
 
 .article-content h1 {
     font-size: 2rem;
-    border-bottom: 2px solid #e9ecef;
+    border-bottom: 2px solid #444;
     padding-bottom: 0.5rem;
 }
 
@@ -352,7 +356,7 @@ img {
     margin-bottom: 1rem;
 }
 
-.article-content ul { 
+.article-content ul, .article-content ol { 
     padding-left: 1rem; 
     margin-bottom: 1rem;
     list-style-position: inside; 
@@ -373,14 +377,15 @@ img {
 }
 
 .article-content code {
-    background: #f1f3f4;
+    background: #282c34;
+    color: #abb2bf;
     padding: 0.2rem 0.4rem;
     border-radius: 4px;
     font-family: 'Courier New', monospace;
 }
 
 .article-content pre {
-    background: #f8f9fa;
+    background: #282c34;
     padding: 1rem;
     border-radius: 8px;
     overflow-x: auto;
@@ -388,15 +393,14 @@ img {
 }
 
 .article-content pre code {
-  display: block;
-  padding: none;
-  border-radius: 8px;
-  background: #282c34;
-  padding: 1rem;
-  color: #abb2bf;
-  overflow-x: auto;
-  font-size: 0.95rem;
-  font-family: 'Fira Code', monospace;
+    display: block;
+    padding: 1rem;
+    border-radius: 8px;
+    background: #282c34;
+    color: #abb2bf;
+    overflow-x: auto;
+    font-size: 0.95rem;
+    font-family: 'Fira Code', monospace;
 }
 
 .article-cover {
@@ -407,16 +411,16 @@ img {
     margin-bottom: 10px;
 }
 
-/*para citações dentro do artigo*/
+/* Blockquotes */
 blockquote {
-    border-left: 4px solid #ccc;
+    border-left: 4px solid #444;
     padding-left: 1rem;
-    color: #666;
+    color: #999;
     font-style: italic;
     margin: 1rem 0;
 }
 
-/* para tabelas dentro do artigo*/
+/* Tables */
 .table-container {
     overflow-x: auto;
     max-width: 100%;
@@ -432,17 +436,18 @@ table {
 
 th, td {
     padding: 0.75rem;
-    border: 1px solid #ddd;
+    border: 1px solid #444;
     text-align: left;
 }
 
 thead {
-    background-color: #f0f0f0;
+    background-color: #1f1f1f;
+    color: #e0e0e0;
 }
 
 .back-btn {
-    background: #6c757d;
-    color: white;
+    background: #555555;
+    color: #e0e0e0;
     border: none;
     padding: 0.5rem 1rem;
     border-radius: 6px;
@@ -451,18 +456,18 @@ thead {
 }
 
 .back-btn:hover {
-    background: #5a6268;
+    background: #4f9eff;
 }
 
 /* Loading State */
 .loading {
     text-align: center;
     padding: 2rem;
-    color: #6c757d;
+    color: #bbbbbb;
 }
 
 .loading-spinner {
-    border: 3px solid #f3f3f3;
+    border: 3px solid #333;
     border-top: 3px solid #4f9eff;
     border-radius: 50%;
     width: 40px;
@@ -478,7 +483,7 @@ thead {
 
 /* Sidebar Styles */
 .sidebar h3 {
-    color: #2c3e50;
+    color: #e0e0e0;
     margin-bottom: 1rem;
     font-size: 1.2rem;
 }
@@ -489,7 +494,7 @@ thead {
 
 .recent-posts li {
     padding: 0.75rem 0;
-    border-bottom: 1px solid #e9ecef;
+    border-bottom: 1px solid #444;
 }
 
 .recent-posts li:last-child {
@@ -497,7 +502,7 @@ thead {
 }
 
 .recent-posts a {
-    color: #495057;
+    color: #bbbbbb;
     text-decoration: none;
     font-size: 0.95rem;
     transition: color 0.3s ease;
@@ -520,7 +525,7 @@ thead {
 }
 
 .category-list a {
-    color: #495057;
+    color: #bbbbbb;
     text-decoration: none;
     display: flex;
     justify-content: space-between;
@@ -533,8 +538,8 @@ thead {
 }
 
 .category-count {
-    background: #e9ecef;
-    color: #6c757d;
+    background: #333333;
+    color: #4f9eff;
     padding: 0.25rem 0.5rem;
     border-radius: 12px;
     font-size: 0.8rem;
