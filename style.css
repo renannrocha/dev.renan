@@ -86,7 +86,7 @@ body {
 .content {
     flex: 1;
     background: #faf8f7;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    /*box-shadow: 0 2px 8px rgba(0,0,0,0.1);*/
     border-radius: 12px;
     padding: 2rem;
     max-width: 865px;
@@ -99,7 +99,7 @@ body {
     border-radius: 12px;
     padding: 2rem;
     height: fit-content;
-    margin-top: 0rem;
+    margin-top: 2rem;
 }
 
 /* Home Page Styles */
