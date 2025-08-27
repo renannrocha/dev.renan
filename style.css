@@ -450,13 +450,17 @@ thead {
 }
 
 .back-btn {
-    background: #555555;
+    background: #333333;
     color: #e0e0e0;
     border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 6px;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
     cursor: pointer;
     transition: background 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1rem;
 }
 
 .back-btn:hover {
