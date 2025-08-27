@@ -210,6 +210,7 @@ async function showArticleBySlug(slug) {
     
     document.getElementById('article-view').classList.add('active');
     document.title = `Renan Rocha - ${article.title}`;
+    window.scrollTo({ top: 0, behavior: 'auto' });
 }
 
 // Show individual article (legacy)

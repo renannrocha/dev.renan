@@ -3,6 +3,7 @@ title: "Template"
 date: "0000-00-00" 
 category: "Category Name" 
 tags: ["Tag 1", "Tag 2", "Tag 3"] 
+coverImage: "../assets/mustang.png"
 excerpt: "description" 
 ---
 
