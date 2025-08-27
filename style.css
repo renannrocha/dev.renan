@@ -35,6 +35,7 @@ body {
 .logo {
     font-size: 1.5rem;
     color: #e0e0e0;
+    text-decoration: none;
 }
 
 .nav-links {
