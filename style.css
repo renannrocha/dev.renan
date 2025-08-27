@@ -399,6 +399,14 @@ img {
   font-family: 'Fira Code', monospace;
 }
 
+.article-cover {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
 /*para citações dentro do artigo*/
 blockquote {
     border-left: 4px solid #ccc;

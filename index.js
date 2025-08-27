@@ -240,9 +240,10 @@ function populateArticles(articlesToShow) {
         const articleCard = document.createElement('div');
         articleCard.className = 'article-card';
         articleCard.innerHTML = `
+            ${article.metadata.coverImage ? `<img src="${article.metadata.coverImage}" alt="${article.title}" class="article-cover">` : ''}
             <div class="article-title">${article.title}</div>
             <div class="article-meta">
-                <span>${formatDate(article.date)}</span>
+                <span>Postado em ${formatDate(article.date)}</span>
                 <span>${article.category}</span>
             </div>
             <div class="article-excerpt">${article.excerpt}</div>

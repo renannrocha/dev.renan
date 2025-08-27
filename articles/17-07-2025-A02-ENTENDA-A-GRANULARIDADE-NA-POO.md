@@ -2,13 +2,10 @@
 title: "Granularidade: A Arte de Quebrar o Sistema no Tamanho Certo" 
 date: "2025-07-17" 
 category: "Arquitetura de Software" 
-tags: ["orientação a objetos", "design de software", "arquitetura orientada a objetos", "boas práticas", "SOLID", "acoplamento", "refatoração", "engenharia de software"] 
+tags: ["orientação a objetos", "design de software", "arquitetura orientada a objetos", "boas práticas", "SOLID", "acoplamento", "refatoração", "engenharia de software"]
+coverImage: "../assets/image_banner_A02.png" 
 excerpt: "Ao projetar sistemas orientados a objetos, uma das maiores dificuldades está em decidir até onde devemos dividir o sistema. Essa decisão tem nome: granularidade." 
 ---
-
-<picture>
-    <img alt="stripe img 1" src="../assets/image_banner_A02.png">
-</picture>
 
 Projetar um sistema orientado a objetos vai muito além de simplesmente criar classes e distribuir métodos. Uma das decisões mais difíceis e também mais cruciais está em como quebrar o sistema em partes menores, ou seja, como decompor o domínio em objetos e responsabilidades bem definidas.
 
