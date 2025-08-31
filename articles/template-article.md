@@ -1,10 +1,10 @@
 ---
-title: "Template"
-date: "0000-00-00" 
-category: "Category Name" 
+title: "Template Article"
+date: "2025-08-31" 
+category: "Category 1" 
 tags: ["Tag 1", "Tag 2", "Tag 3"] 
-coverImage: "../assets/mustang.png"
-excerpt: "description" 
+coverImage: "../assets/default-banner.png"
+excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed nibh velit. Aliquam faucibus enim varius nisi laoreet, et congue lacus ultrices." 
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut cursus tortor non lacus dictum iaculis. Donec viverra ac felis vel vehicula. Nulla commodo ex a justo consectetur cursus. Vestibulum posuere vitae quam ut ornare. Donec venenatis sem quis erat placerat, et egestas diam hendrerit. Maecenas quis massa finibus, molestie erat commodo, vulputate leo. Vivamus ut porttitor metus. Donec venenatis interdum diam. Curabitur faucibus, dui viverra fringilla volutpat, ipsum justo dapibus orci, et molestie lacus nisl nec dui. Aenean vitae dui malesuada, ullamcorper magna sed, efficitur magna. Sed fringilla ultrices bibendum. Duis ac ante massa.

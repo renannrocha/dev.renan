@@ -4,9 +4,9 @@ let currentFilteredArticles = [];
 
 // List of markdown files to load
 const markdownFiles = [
-    //'template-article.md',
+    '17-07-2025-A02-ENTENDA-A-GRANULARIDADE-NA-POO.md',
     //'02-07-2025-A01-IMPLEMENTANDO-SISTEMA-DE-ASSINATURA-E-PAGAMENTO-COM-STRIPE.md',
-    '17-07-2025-A02-ENTENDA-A-GRANULARIDADE-NA-POO.md'
+    //'template-article.md'
 ];
 
 // Parse frontmatter from markdown content
