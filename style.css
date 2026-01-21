@@ -6,7 +6,7 @@
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    background: #121212;
+    background: #000000;
     color: #e0e0e0;
     min-height: 100vh;
 }
@@ -19,9 +19,9 @@ body {
 
 /* Header */
 .header {
-    background: #121212;
+    background: #0c0c0c;
     padding: 1rem 0;
-    border-bottom: 1px solid #121212;
+    border-bottom: 1px solid #242424;
 }
 
 .nav {
@@ -63,30 +63,73 @@ body {
     padding: 2rem 0;
 }
 
-/* gif banner */
-.bannerlayout {
-    width: 100%;
-    height: 200px;
+/* Header do terminal */
+.terminal-header {
+    height: 34px;
+    background: linear-gradient(#1c1c1c, #141414);
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    gap: 8px;
+    border-radius: 10px 10px 0 0;
+}
+
+.terminal-frame{
     margin-bottom: 1rem;
-    border-radius: 10px;
-    overflow: hidden; 
+}
+
+/* Botões estilo macOS */
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dot.red {
+    background: #ff5f56;
+}
+
+.dot.yellow {
+    background: #ffbd2e;
+}
+
+.dot.green {
+    background: #27c93f;
+}
+
+/* Área do "terminal" */
+.terminal-body {
+    background: #0e0e0e;
+    padding: 16px;
+    width: 100%;
+    max-width: none;
+    height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #000000;
+    overflow: hidden;
+    border-radius: 0 0 10px 10px;
+    border-bottom: #141414 1px solid;
+    border-left: #141414 1px solid;
+    border-right: #141414 1px solid;
 }
 
-.gifbanner {
-    width: 90%;
-    height: 90%;
-    object-fit: cover;
-    border-radius: 0;
-    display: block;
+.donut {
+    font-family: "Fira Code", "Courier New", monospace;
+    font-size: 11px;
+    line-height: 11px;
+    color: #cfcfcf;
+    white-space: pre;
+    margin: 0;
+    text-align: center;
+    user-select: none;
+    transform: scale(1.15); /* 🔥 zoom do donut */
 }
 
 .content {
     flex: 1;
-    background: #121212;
+    background: #000000;
     border-radius: 12px;
     padding: 0rem;
     max-width: 865px;
@@ -95,35 +138,33 @@ body {
 
 .sidebar {
     width: 300px;
-    background: #1e1e1e;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.6);
-    border-radius: 12px;
-    padding: 2rem;
     height: fit-content;
     margin-top: 0rem;
 }
 
 /* Home Page Styles */
 .hero {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
+    border-bottom: #1c1c1c 1px solid;
 }
 
 .hero h2 {
-    margin-bottom: 1rem;
-    color: #e0e0e0;
+    margin-bottom: 2rem;
+    color: #bbbbbb;
 }
 
 .hero p {
     font-size: 1.1rem;
-    color: #cccccc;
+    color: #888888;
     word-wrap: break-word;
     overflow-wrap: break-word;
     word-break: break-word;
     line-height: 1.6;
+    margin-bottom: 1rem;
 }
 
 .btn {
-    background: #333333;
+    background: linear-gradient(#000a8b, #00065f, #000441);
     color: #e0e0e0;
     border: none;
     padding: 0.75rem 1.5rem;
@@ -134,23 +175,28 @@ body {
     text-decoration: none;
     display: inline-block;
     margin-top: 1rem;
+    margin-bottom: 3rem;
 }
 
 .btn:hover {
-    background: #4f9eff;
+    background: linear-gradient(135deg, #0013ff, #000b8f, #000441);
+    box-shadow: 
+        0 0 40px rgba(0, 20, 255, 0.35),
+        0 0 80px rgba(0, 10, 150, 0.2);
 }
 
 .about {
     margin-top: 1rem;
-    background: #1e1e1e;
+    background: #0c0c0c;
     box-shadow: 0 2px 8px rgba(0,0,0,0.6);
     border-radius: 12px;
-    padding: 2rem;
+    padding: 1rem 2rem;
+    border: #242424 1px solid;
 }
 
 .about h2 {
     margin-bottom: 1.5rem;
-    color: #e0e0e0;
+    color: #bbbbbb;
 }
 
 .about-content {
@@ -161,24 +207,28 @@ body {
 }
 
 .about-image-jpg {
-    width: 170px;
+    width: 120px;
     height: auto;
-    border-radius: 10px;
+    border-radius: 100px;
     flex-shrink: 0;
     display: block;
 }
 
 .about-text {
     flex: 1;
-    color: #e0e0e0;
+    color: #888888;
     line-height: 1.6;
     text-align: left;
     align-self: stretch;
 }
 
+.about-text p {
+    margin-bottom: 1rem;
+}
+
 /* Footer */
 .footer {
-    background-color: #1f1f1f;
+    background-color: #0c0c0c;
     color: #888;
     padding: 2rem 0 1rem;
     font-size: 0.95rem;
@@ -280,12 +330,13 @@ img {
 }
 
 .article-card {
-    background: #1e1e1e;
+    background: #0c0c0c;
     border-radius: 12px;
     padding: 1.5rem;
     box-shadow: 0 2px 8px rgba(0,0,0,0.6);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
+    border: #242424 1px solid;
 }
 
 .article-card:hover {
@@ -430,6 +481,7 @@ blockquote {
     overflow-x: auto;
     max-width: 100%;
     margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 table {
@@ -492,9 +544,16 @@ thead {
 
 /* Sidebar Styles */
 .sidebar h3 {
-    color: #e0e0e0;
+    color: #bbbbbb;
     margin-bottom: 1rem;
     font-size: 1.2rem;
+}
+
+.recent-posts-list{
+    background: #0c0c0c;
+    border: #242424 1px solid;
+    padding: 1rem;
+    border-radius: 12px;
 }
 
 .recent-posts {
@@ -522,7 +581,11 @@ thead {
 }
 
 .categories {
-    margin-top: 2rem;
+    margin-top: 1rem;
+    background: #0c0c0c;
+    border: #242424 1px solid;
+    padding: 1rem;
+    border-radius: 12px;
 }
 
 .category-list {
@@ -534,7 +597,7 @@ thead {
 }
 
 .category-list a {
-    color: #bbbbbb;
+    color: #888888;
     text-decoration: none;
     display: flex;
     justify-content: space-between;

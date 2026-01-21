@@ -40,16 +40,30 @@
                 <div id="home" class="page active">
                     <div class="hero">
                         <h2>Seja bem vindo 👋</h2>
-                        <div class="bannerlayout">
-                            <img src="/assets/banner.gif" alt="gif banner" class="gifbanner">
+                        
+                        <div class="terminal-frame">
+                            <div class="terminal-header">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                            </div>
+
+                            <div class="terminal-body">
+                                <!-- <img src="/assets/banner.gif" alt="gif banner" class="gifbanner"> -->
+                                <pre id="d" class="donut"></pre>
+                            </div>
                         </div>
-                        <p>Aqui você vai encontrar artigos sobre programação, arquitetura de software, boas práticas, ferramentas que uso no dia a dia, e reflexões sobre a minha rotina. Tudo escrito de forma direta, sem rodeios — como se fosse uma boa conversa entre colegas de profissão.</p>
+
+                        <p>Aqui você vai encontrar artigos sobre programação, arquitetura de software, boas práticas, ferramentas que uso no dia a dia, e reflexões sobre a minha rotina. Tudo escrito de forma direta, sem rodeios como se fosse uma boa conversa entre colegas de profissão.</p>
                         <p>Meu objetivo é simples: registrar o que aprendo, compartilhar o que sei e, quem sabe, ajudar você a compreender melhor sobre algum assunto.</p>
-                        <br>
-                        <p>Então, fique à vontade. Leia, explore, comente, critique. Esse espaço também é seu.</p>
                         <a href="#" class="btn" onclick="navigateTo('/archive'); return false;">Explorar</a>
                     </div>
-                    
+
+                    <!-- <div class="recent-posts-cards">
+                        <h2>Posts Recentes</h2>
+                        
+                    </div> -->
+
                     <div class="about">
                         <h2>Quem sou eu?</h2>
                         <div class="about-content">
@@ -88,7 +102,7 @@
             </div>
 
             <aside class="sidebar">
-                <div>
+                <div class="recent-posts-list">
                     <h3>Posts Recentes</h3>
                     <ul class="recent-posts" id="recentPosts">
                         <!-- Recent posts will be populated here -->
@@ -102,6 +116,7 @@
                     </ul>
                 </div>
             </aside>
+
         </div>
     </main>
     
@@ -131,5 +146,6 @@
     <script>hljs.highlightAll();</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.3.0/marked.min.js"></script>
     <script src="/index.js"></script>
+    <script src="/donnut.js"></script>
 </body>
 </html>
