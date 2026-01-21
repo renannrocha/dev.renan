@@ -198,6 +198,10 @@ body {
     margin-bottom: 1.5rem;
 }
 
+.section-header h2 {
+    color: #bbbbbb;
+}
+
 .view-archive {
     color: #4f9eff;
     text-decoration: none;
