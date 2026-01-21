@@ -144,7 +144,7 @@ body {
 
 /* Home Page Styles */
 .hero {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     border-bottom: #1c1c1c 1px solid;
 }
 
@@ -175,7 +175,7 @@ body {
     text-decoration: none;
     display: inline-block;
     margin-top: 1rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 .btn:hover {
@@ -186,10 +186,6 @@ body {
 }
 
 /* Estilos para os Cards de Posts Recentes */
-.recent-posts-cards {
-    margin-bottom: 4rem;
-    border-bottom: #1c1c1c 1px solid;
-}
 
 .section-header {
     display: flex;
