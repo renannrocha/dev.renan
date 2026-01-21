@@ -4,7 +4,8 @@ date: "2025-07-02"
 category: "Integrações de APIs" 
 tags: ["Stripe", "Java", "Spring Boot", "API REST", "Pagamentos Online", "Assinatura Recorrentes", "Stripe API", "Checkout", "Webhooks"]
 coverImage: "../assets/stripe-img1.png" 
-excerpt: "apresentando uma forma de implementação do sistema de pagamento e assinatura utilziando a API do Stripe com Java" 
+excerpt: "apresentando uma forma de implementação do sistema de pagamento e assinatura utilziando a API do Stripe com Java"
+readTime: "10 min read" 
 ---
  
 Há cerca de um ano, eu e alguns amigos decidimos nos unir para criar uma startup: a **MalDec Labs**. Nosso objetivo era fornecer uma solução robusta para auxiliar profissionais de segurança na análise de ameaças digitais. Foi assim que nasceu o **Infinity**.

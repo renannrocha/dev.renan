@@ -121,6 +121,7 @@ async function loadAllArticles() {
         
         populateArticles(articles);
         populateSidebar();
+        populateRecentCards(articles);
         
     } catch (error) {
         console.error('Error loading articles:', error);
@@ -292,6 +293,42 @@ function populateSidebar() {
             </li>
         `).join('');
     }
+}
+
+function populateRecentCards(allArticles) {
+    const container = document.getElementById('recentCardsGrid');
+    if (!container) return;
+
+    // Pega os 5 artigos mais recentes
+    const recent = allArticles.slice(0, 5);
+    container.innerHTML = '';
+
+    recent.forEach(article => {
+        // Simulação de tempo de leitura (pode ser ajustado no frontmatter depois)
+        const readTime = article.metadata.readTime || "5 min read";
+        const cover = article.metadata.coverImage || "https://via.placeholder.com/400x225/1a1a1a/888888?text=dev.renan";
+
+        const card = document.createElement('div');
+        card.className = 'post-card';
+        card.innerHTML = `
+            <div class="card-image-wrapper">
+                <div class="card-badge">${article.category}</div>
+                <img src="${cover}" alt="${article.title}" class="card-image">
+            </div>
+            <div class="card-content">
+                <h3>${article.title}</h3>
+                <p class="card-description">${article.excerpt}</p>
+                <div class="card-footer">
+                    <span>${readTime}</span>
+                    <span>•</span>
+                    <span>Publicado em ${formatDate(article.date)}</span>
+                </div>
+            </div>
+        `;
+        
+        card.addEventListener('click', () => navigateTo(`/article/${article.slug}`));
+        container.appendChild(card);
+    });
 }
 
 // Search functionality
