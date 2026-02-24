@@ -199,6 +199,7 @@ async function showArticleBySlug(slug) {
             <div class="article-meta">
                 <span>Postado em ${formatDate(article.date)}</span>
                 <span>${article.category}</span>
+                <span>${article.metadata.readTime || '2 min read'}</span>
             </div>
             <div style="margin-top: 1rem;">
                 ${article.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
@@ -247,6 +248,7 @@ function populateArticles(articlesToShow) {
             <div class="article-meta">
                 <span>Postado em ${formatDate(article.date)}</span>
                 <span>${article.category}</span>
+                <span>${article.metadata.readTime || '2 min read'}</span>
             </div>
             <div class="article-excerpt">${article.excerpt}</div>
             <div style="margin-top: 1rem;">
