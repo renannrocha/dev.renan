@@ -5,6 +5,7 @@ let currentFilteredArticles = [];
 // List of markdown files to load
 const markdownFiles = [
     '17-07-2025-A02-ENTENDA-A-GRANULARIDADE-NA-POO.md',
+    '29-03-2025-A03-CONSTRUINDO-CASTELOS-DE-AREIA-COM-IA.md',
     //'02-07-2025-A01-IMPLEMENTANDO-SISTEMA-DE-ASSINATURA-E-PAGAMENTO-COM-STRIPE.md',
     //'template-article.md'
 ];
