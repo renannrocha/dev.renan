@@ -1,5 +1,5 @@
 ---
-title: "Construindo castelos de areia com IA: Uma análise sobre fragilidade, ética e responsabilidade."
+title: "Construindo castelos de areia com IA: Uma análise de caso."
 date: "2026-03-29" 
 category: "Segurança & Tecnologia"
 tags: ["VibeCoding", "Segurança da Informação", "Inteligência Artificial", "SaaS", "LGPD"]
