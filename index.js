@@ -244,7 +244,6 @@ function populateArticles(articlesToShow) {
         const articleCard = document.createElement('div');
         articleCard.className = 'article-card';
         articleCard.innerHTML = `
-            ${article.metadata.coverImage ? `<img src="${article.metadata.coverImage}" alt="${article.title}" class="article-cover">` : ''}
             <div class="article-title">${article.title}</div>
             <div class="article-meta">
                 <span>Postado em ${formatDate(article.date)}</span>
@@ -309,15 +308,10 @@ function populateRecentCards(allArticles) {
     recent.forEach(article => {
         // Simulação de tempo de leitura (pode ser ajustado no frontmatter depois)
         const readTime = article.metadata.readTime || "5 min read";
-        const cover = article.metadata.coverImage || "https://via.placeholder.com/400x225/1a1a1a/888888?text=dev.renan";
 
         const card = document.createElement('div');
         card.className = 'post-card';
         card.innerHTML = `
-            <div class="card-image-wrapper">
-                <div class="card-badge">${article.category}</div>
-                <img src="${cover}" alt="${article.title}" class="card-image">
-            </div>
             <div class="card-content">
                 <h3>${article.title}</h3>
                 <p class="card-description">${article.excerpt}</p>
